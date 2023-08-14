@@ -1,0 +1,467 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+@media (max-width:900px){
+    body{
+        color: black;
+    }
+}
+body{
+   
+    background-size:100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:white;  
+}
+
+
+nav{
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid black;
+}
+label.logo{
+    color:white;
+    font-size: 40px;
+    text-align: right;
+    font-family:Lucida Grande;
+    line-height: 80px;
+    padding:0 12px;
+    font-weight: bold;
+    margin-left: 40%;  
+}
+label.tickets{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 45%;
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height:80px;
+    margin:0 5px;
+}
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    background: rgb(139, 134, 134);
+    transition: .5s;
+}
+nav ul li ul{
+    position: absolute;
+    display: none;
+    background-color:lightskyblue;  
+    border-radius: 0px 0px 5px 5px;
+}
+nav ul li:hover ul{
+    display: block;
+}
+nav ul li ul li{
+    line-height: 1;
+    width: 140px;
+    border-radius: 5px;
+    padding:6px;
+    display: block;
+}
+nav ul li ul a{
+    padding: 10px 16px;
+}
+nav ul li ul li a:hover{
+    background-color: rgb(84, 150, 191);
+    transition: .5s;
+}
+nav ul li a:hover{
+    background: rgb(84, 150, 191) ;  
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+
+}
+.bars{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:700px){
+    body{
+        font-size: 14px;
+    }
+    label.logo{
+        font-size: 18px;
+        padding-left: 5px;
+        margin-left: 20%;
+    }
+    label.tickets{
+        font-size: 13px;
+        margin-left: 22%;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:700px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(68, 152, 221);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height:30px ;
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: black;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    .tickets-box{
+        margin: 5% 2%;
+        padding: 5px;
+        border: none;
+    }
+    .book-tickets{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .ticketsPriceTable{
+        width: 100%;
+        margin-left: 0;
+    }
+    .pricingsTable{
+        width: 50%;
+        font-size: 12px;
+        margin-left: -10%;
+    }
+    .price{
+        font-size: 12px;
+    }
+    .hours{
+        font-size: 12px;
+    }
+    .form-container{
+        flex-direction: column;
+    }
+    .calendar{
+        margin-left: 0;
+    }
+    .ticketType,.time-slots{
+        margin-left: -3%;
+        margin-top: 5%;
+    }
+    .book-tickets{
+        display: none;
+    }
+    label.tickets{
+        display: none;
+    }
+    label.logo{
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/*turtle banner*/
+.image-section{
+    background: url(donatello-images-final/tickets_bg.jpeg) no-repeat;
+    background-size: cover;
+    height: 150px;
+  }
+.background-image h2 {
+    top: 33%;
+    left: 3%;
+    color: #fff;
+    position: absolute;
+    font-size: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+.background-image p {
+    top: 45%;
+    left: 17%;
+    color: #fff;
+    position: absolute;
+    font-size: 27px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    @media(max-width:900px){
+        .background-image{
+          width: 100%;
+    } 
+    .background-image h2 {
+    font-size:48px;
+    top:22%;
+    left:3%;
+    display: none;
+  }
+}
+@media(max-width:900px){
+    .background-image p {
+    font-size:20px;
+    top:40%;
+    left:15%;
+    display: none;
+  }
+  .pick-box{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+
+
+/*table1*/
+
+.heading-table{
+    margin-left:60%;
+    background-color: lightblue;
+    margin-bottom: 2%;
+    font-size:12px;
+    font-weight:bold;
+    width:150%;
+    text-align:center;
+    margin-top: 4%;
+}
+.pricingsTable{
+    width: 200%;
+    margin-left: 30%;
+}
+.price{
+    background-color: lightblue;
+}
+.hours{
+    background-color: rgb(199, 230, 240);
+}
+
+
+
+.tickets-box{
+    border: 3px solid black;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tickets-button{
+    margin-left: 10%;
+    background-color:lightblue ;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.pick-box{
+   display: flex;
+   border: 2px solid black;
+   padding: 20px;
+   margin-left: 5%;
+   margin-right:  5%;
+    
+}
+.ticketsss{
+    border: 2px solid lightblue;
+    padding: 10px;
+    margin-left: 22%;
+}
+.timeee{
+    margin-left: 20%;
+}
+
+
+.summary{
+    margin-left: 10%;
+}
+.dateee{
+    margin-left: 10%;
+    margin-top: 1%;
+}
+ #purchase-button{
+    color: black;
+    background-color: lightblue;
+    margin-left: 45%;
+    margin-top: 5%;
+ }
+
+/*table*/
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-left: 15%;
+    
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: white;
+}
+.bold{
+    background-color: lightblue;
+}
+
+
+.p{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+ footer{
+    position: fixed;
+    bottom: 0;
+  }
+  
+.foo-ter{
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    text-align: left;
+    font: bold 16px;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+.footer-left,.footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+.footer-left{
+    width: 40%;
+    margin-left: 4%;
+}
+.foo-ter h3{
+    color: white;
+    font: 35px;
+    margin: 0;
+}
+.foo-ter h3 span{
+    color: lightblue;
+}
+.footer-links{
+    color: white;
+    margin: 20px 0 12px;
+}
+.footer-links a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+.footer-companyname{
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-right{
+    width: 40%;
+    margin-left:11%; 
+}
+.footer-companyabout{
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+.footer-companyabout span{
+    display: block;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links a:hover{
+    color: lightblue;
+}
+
+@media(max-width:900px){
+  .footer{
+    flex-wrap: wrap;
+  }
+  .footer-right{
+    margin-left: -8%;
+    width:90%
+  }
+  .footer-left{
+    width: 100%;
+    margin-left: -5%;
+  }
+  .foo-ter.footer-links, .foo-ter, .foo-ter.footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+footer{
+    position: static;
+}
+}
+@media(max-height:900px)
+  {
+    footer{
+        position: static;
+    }
+}
+
+
+.book-tickets{
+    margin-left: 7%;
+    margin-right: 60%;
+}
+

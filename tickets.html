@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tickets</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="tickets.css">
+    </head>
+    <body>
+       
+        <div>
+            <nav>
+            
+                <label class="logo">BUY TICKETS</label>
+                <label class="tickets">Tickets page</label>
+              
+            </nav>
+            </div>
+        <!--turtle banner-->
+       
+          <div class="background-image">
+            <div class="image-section"></div>
+             
+              
+            </div><br>
+          <br>
+
+          <div class="book-tickets">
+            
+            <div class="heading-table"><h1>Types of tickets and their prices</h1></div><br>
+            <table class="pricingsTable">
+            <thead>
+                <tr>
+                <th class="hours" colspan="4">Normal hours</th>
+                <th class="hours" colspan="4">Peak hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td >SL adult</td>
+                  <td >SL child</td>
+                  <td >Foreign adult</td>
+                  <td >Foreign child</td>
+                
+                  <td >SL adult</td>
+                  <td >SL child</td>
+                  <td >Foreign adult</td>
+                  <td >Foreign child</td>
+                </tr>
+
+                <tr>
+                  <td class="price">4 USD</td>
+                  <td class="price">2 USD</td>
+                  <td class="price">10 USD</td>
+                  <td class="price">5 USD</td>
+                
+                  <td class="price">6 USD</td>
+                  <td class="price">3 USD</td>
+                  <td class="price">13 USD</td>
+                  <td class="price">8 USD</td>
+                </tr>
+            </tbody>
+          </table>
+         
+          </div>
+          <div class="p">
+          <p>● Please note that every day from 10.00 am to 1.00 pm and from 3.00 pm to 6.00 pm will be considered as Peak hours</p>
+          </div>
+          <br><br>
+
+          <div class="pick-box">
+          <div class="dateee">
+            <div class="title-box"><h3>Pick a date:</h3></div>
+            <div class="date">
+              <input type="date" id="reservation-id" onchange="updateSelectedDate()">    
+            </div>
+        </div>
+
+        <div class="ticketsss">
+        <h3>Select your tickets:</h3>
+        
+        <p>Sri Lankan Child</p>
+        <div class="spinner-row">
+          <div class="number-spinner" id="SL-child">
+            <button onclick="stepperSLC(-1)"> - </button>         
+            <input type="number" min="0" max="100" step="1" value="0" id="slc" readonly>        
+            <button onclick="stepperSLC(1)">+</button>
+          </div>
+          <div class="spinner-header">
+           
+          </div>
+        </div><br>
+        
+        <p>Sri Lankan Adult</p>
+        <div class="spinner-row">
+          <div class="number-spinner" id="SL-adult">
+            <button onclick="stepperSLA(-1)"> - </button>        
+            <input type="number" min="0" max="100" step="1" value="0" id="sla" readonly>         
+            <button onclick="stepperSLA(1)">+</button>
+          </div>
+          <div class="spinner-header">
+           
+          </div>
+        </div><br>
+        
+        <p>Foreigner Child</p>
+        <div class="spinner-row">
+          <div class="number-spinner" id="foreigner-child">
+            <button onclick="stepperFC(-1)"> - </button>          
+            <input type="number" min="0" max="100" step="1" value="0" id="fc" readonly>           
+            <button onclick="stepperFC(1)">+</button>
+          </div>
+          <div class="spinner-header">
+           
+          </div>
+        </div><br>
+        
+        <p>Foreigner Adult</p>
+        <div class="spinner-row">
+          <div class="number-spinner" id="foreigner-adult">
+            <button onclick="stepperFA(-1)"> - </button>    
+            <input type="number" min="0" max="100" step="1" value="0" id="fa" readonly>
+            <button onclick="stepperFA(1)">+</button>
+          </div>
+          <div class="spinner-header">
+           
+          </div>
+        </div><br>
+       
+        
+        <p>Infant</p>
+        <div class="spinner-row">
+          <div class="number-spinner" id="infant">
+            <button onclick="stepperInf(-1)"> - </button>
+            <input type="number" min="0" max="100" step="1" value="0" id="in" readonly>
+            <button onclick="stepperInf(1)">+</button>
+          </div>
+          <div class="spinner-header">
+           
+          </div>
+        </div>
+        </div><br>
+
+        <div class="timeee">
+        <h3>Select your time slot:</h3>
+              <label><input type="checkbox" class="timeSlot" value="7am-8am"> 7am-8am</label><br>
+              <label><input type="checkbox" class="timeSlot" value="8am-9am"> 8am-9am</label><br>
+              <label><input type="checkbox" class="timeSlot" value="9am-10am"> 9am-10am</label><br>
+              <label><input type="checkbox" class="timeSlot" value="10am-11am"> 10am-11am</label><br>
+              <label><input type="checkbox" class="timeSlot" value="11am-12pm"> 11am-12pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="12pm-1pm"> 12pm-1pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="1pm-2pm"> 1pm-2pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="2pm-3pm"> 2pm-3pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="3pm-4pm"> 3pm-4pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="4pm-5pm"> 4pm-5pm</label><br>
+              <label><input type="checkbox" class="timeSlot" value="5pm-6pm"> 5pm-6pm</label><br>
+
+              </div>
+              </div>
+            
+          <div class="form-container">
+          
+         
+          </div>
+            
+          
+            <br><br>
+          
+
+            <div id="summary">
+            <table>
+              <tr>
+                  <th>Date:</th>
+                  <td><span id="selectedDatee"></span> </td>
+                  
+              </tr>
+              <tr>
+                  <th>Time:</th>
+                  <td><span id="timeSlot"></span> </td>
+              </tr>
+              <tr>
+                  <th>Duration:</th>
+                  <td><span id="durationn"></span></td>
+              </tr>
+              
+              <tr>
+                  <th class="bold">Tickets:</th>
+                  <td class="bold">Charges</td>
+              </tr>
+             
+              <tr>
+                <td><div><span id="slChildTicket">0</span> SL Children</div>  </td>
+                <td><div>$<span id="slChildCharge">0</span></div></td>
+              </tr>
+              <tr>
+                <td><div><span id="slAdultTicket">0</span> SL Adults </div></td>
+                <td><div>$<span id="slAdultCharge">0</span></div></td>
+              </tr>
+              <tr>
+                <td><div><span id="foreignerChildTicket">0</span> Foreign Children </div></td>
+                <td><div>$<span id="foreignerChildCharge">0</span> </div></td>
+              </tr>
+              <tr>
+                <td><div><span id="foreignerAdultTicket">0</span> Foreign Adults </div></td>
+                <td><div>$<span id="foreignerAdultCharge">0</span> </div></td>
+              </tr>
+              <tr>
+                <td><div><span id="infantTicket">0</span> Infants </div></td>
+                <td><div>$<span id="infantCharge">0</span></div></td>
+              </tr>
+             
+              <tr>
+                  <th class="bold">Total Payable</th>
+                  <td class="bold"><div id="chargeSummary"></div> </td>
+              </tr>
+
+          </table>
+        </div>
+
+        <a href="details.html" id="purchase-link" >
+          <button id="purchase-button" disabled>Continue with Purchase</button>
+        </a>
+
+
+         <!--footer-->
+         <footer class="foo-ter">
+            <div class="footer-left">
+                <h3>Donatello<span>Hatcheries</span></h3>
+
+                <p class="footer-links">
+                    <a href="index.html">Home</a>
+                    |
+                    <a href="turtlecategories.html">Categories</a>
+                    |
+                    <a href="Hikkaduwahatchery.html">Hikkaduwa hatchery</a>
+                    |
+                    <a href="otherturtlehatcheries.html">Kosgoda & Benthota hatcheries</a>
+                    |
+                    <a href="threatstoturtles.html">Threats</a>
+                    |
+                    <a href="purchasendonate.html">Purchase/Donate</a>
+                    |
+                    <a href="contactus.html">Contact us</a>
+                    
+                </p><br><br>
+           
+            </div>
+
+           
+            <div class="footer-right">
+               <p class="footer-companyabout">
+                <span>About us</span>
+                <strong>Donatello Hatcheries</strong> is a website where you can find all the information you need to know about turtles from all types of turtles to threats of turtles to all the turtle hactheries you can visit including the main hatchery being Hikkaduwa to turtle merch to many more! 
+               </p><br><br>
+               <p class="footer-companyname"> &copy;2023 Mindi Chenaya's Turtle hatchery web.<br>All rights reserved.</p>
+
+              
+            </div> 
+
+            <script src="tickets.js"></script>
+            </footer>
+            
+
+            </body>
+            </html>
+
